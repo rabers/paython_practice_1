@@ -71,6 +71,6 @@ for i in images_list:
     #target_full_path = target_folder[target_folder.index("/")+1:target_folder.index(".img")] + "_MERGED.jpg"
     target_full_path = target_folder + "/Img/merged.jpg"
     print(target_full_path)
-    print(target_folder)
+    #print(target_folder)
     new_image.save(target_full_path,"JPEG")
 #     #new_image.save("RawData/20220921_D2_S19069032B24.img/merged_image_final.jpg","JPEG")
