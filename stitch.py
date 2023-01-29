@@ -55,11 +55,11 @@ for i in images_list:
     new_image = Image.new('RGB',(num_of_columns*px, num_of_lines*py), (250,250,250))
     #new_image = Image.new('RGB',(17*1388, 23*1038), (250,250,250))
 
-#     #print(image_file_full_path[1])
-#     #print(image_file_full_path[10])
-#     #print(image_file_full_path[390])
-#     #print(num_of_columns)
-#     #print(num_of_lines)
+    #print(image_file_full_path[1])
+    #print(image_file_full_path[10])
+    #print(image_file_full_path[390])
+    #print(num_of_columns)
+    #print(num_of_lines)
     #print(px)
     #print(py)
     counter = 0
@@ -68,9 +68,8 @@ for i in images_list:
             image_to_paste = Image.open(image_file_full_path[counter])
             new_image.paste(image_to_paste,(x*px,y*py))
             counter += 1
-    #target_full_path = target_folder[target_folder.index("/")+1:target_folder.index(".img")] + "_MERGED.jpg"
-    target_full_path = target_folder + "/Img/merged.jpg"
+    #print(target_folder[target_folder.find('/data/')+6:target_folder.find(".img")])
+    target_full_path = target_folder + "/" + target_folder[target_folder.find('/data/')+6:target_folder.find(".img")] +"_final.jpg"
     print(target_full_path)
     #print(target_folder)
     new_image.save(target_full_path,"JPEG")
-#     #new_image.save("RawData/20220921_D2_S19069032B24.img/merged_image_final.jpg","JPEG")
