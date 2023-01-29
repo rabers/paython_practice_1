@@ -28,7 +28,9 @@ for i in images_list:
         #print(image_file_full_path)
 
     image_file_base_name.sort(reverse=True)
-    image_file_full_path.sort(reverse=True)
+    image_file_full_path.sort(reverse=False)
+    #print(image_file_base_name,'\n')
+
     #print(image_file_base_name[0])
     #print(image_file_full_path[0])
 
