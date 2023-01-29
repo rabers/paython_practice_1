@@ -58,15 +58,17 @@ for i in images_list:
 #     #print(image_file_full_path[390])
 #     #print(num_of_columns)
 #     #print(num_of_lines)
-    print(px)
-    print(py)
-#     counter = 0
-#     for y in range(num_of_lines):
-#         for x in range(num_of_columns):
-#             image_to_paste = Image.open(image_file_full_path[counter])
-#             new_image.paste(image_to_paste,(x*px,y*py))
-#             counter += 1
-#     target_full_path = target_folder + "/" + target_folder[target_folder.index("/")+1:target_folder.index(".img")] + "_MERGED.jpg"
-#     #print(target_full_path)
-#     new_image.save(target_full_path,"JPEG")
+    #print(px)
+    #print(py)
+    counter = 0
+    for y in range(num_of_lines):
+        for x in range(num_of_columns):
+            image_to_paste = Image.open(image_file_full_path[counter])
+            new_image.paste(image_to_paste,(x*px,y*py))
+            counter += 1
+    #target_full_path = target_folder[target_folder.index("/")+1:target_folder.index(".img")] + "_MERGED.jpg"
+    target_full_path = target_folder + "/Img/merged.jpg"
+    print(target_full_path)
+    print(target_folder)
+    new_image.save(target_full_path,"JPEG")
 #     #new_image.save("RawData/20220921_D2_S19069032B24.img/merged_image_final.jpg","JPEG")
