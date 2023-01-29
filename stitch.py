@@ -14,47 +14,52 @@ for directory in os.scandir(root_dir):
         dir_as_str = ''.join(str(directory))
         #print(as_str[as_str.index("'")+1:as_str.index("'>")])
         images_list.append(dir_as_str[dir_as_str.index("'")+1:dir_as_str.index("'>")])
-# #images_list holds the list of directories, where each directory holds a set of images completing the bigger image
-# for i in images_list:
-#     image_file_base_name = []
-#     image_file_full_path = []
-#     #print(i)
-#     image_set_dir = "RawData/"+i+'/Img'
-#     #print(image_set_dir+'/*.jpg')
-#     for file in glob.glob(image_set_dir+'/*.jpg'):
-#         image_file_base_name.append(os.path.basename(file))
-#         image_file_full_path.append(file)
-#         #print(file)
+        #print(images_list)
+#images_list holds the list of directories, where each directory holds a set of images completing the bigger image
+for i in images_list:
+    image_file_base_name = []
+    image_file_full_path = []
+    #print(i)
+    image_set_dir = "/Users/shayraber/data/"+i+'/Img'
+    #print(image_set_dir+'/*.jpg')
+    for file in glob.glob(image_set_dir+'/*.jpg'):
+        image_file_base_name.append(os.path.basename(file))
+        image_file_full_path.append(file)
+        #print(image_file_full_path)
 
-#     image_file_base_name.sort(reverse=True)
+    image_file_base_name.sort(reverse=True)
+    image_file_full_path.sort(reverse=True)
+    #print(image_file_base_name[0])
+    #print(image_file_full_path[0])
 
-#     path_str = ''.join(str(image_file_full_path[0]))
-#     base_str = ''.join(str(image_file_base_name[0]))
+    path_str = ''.join(str(image_file_full_path[0]))
+    base_str = ''.join(str(image_file_base_name[0]))
 
-#     idx_columns = base_str.index("C")
-#     idx_lines = base_str.index("L")
-#     idx_filetype = base_str.index(".")
-#     idx_folder = path_str.index(".img/")
+    idx_columns = base_str.index("C")
+    idx_lines = base_str.index("L")
+    idx_filetype = base_str.index(".")
+    idx_folder = path_str.index(".img/")
 
-#     num_of_lines = int(base_str[idx_lines+1:idx_columns]) +1  #This variable holds the # of lines as it appears after the 'L' within the file name - need to be modified accordingly
-#     num_of_columns = int(base_str[idx_columns+1:idx_filetype])+1  #This variable holds the # of columns as it appears after the 'C' within the file name - need to be modified accordingly
-    
-#     target_folder = path_str[:idx_folder+4]
-#     #print(target_folder)
-#     a_small_image = Image.open(path_str)
-#     a_small_image_size = a_small_image.size
-#     px = a_small_image_size[0]
-#     py = a_small_image_size[1]
-#     new_image = Image.new('RGB',(num_of_columns*px, num_of_lines*py), (250,250,250))
-#     #new_image = Image.new('RGB',(17*1388, 23*1038), (250,250,250))
+    num_of_lines = int(base_str[idx_lines+1:idx_columns]) +1  #This variable holds the # of lines as it appears after the 'L' within the file name - need to be modified accordingly
+    num_of_columns = int(base_str[idx_columns+1:idx_filetype])+1  #This variable holds the # of columns as it appears after the 'C' within the file name - need to be modified accordingly
+    #print(num_of_columns)
+    #print(num_of_lines)
+    target_folder = path_str[:idx_folder+4]
+    #print(target_folder)
+    a_small_image = Image.open(path_str)
+    a_small_image_size = a_small_image.size
+    px = a_small_image_size[0]
+    py = a_small_image_size[1]
+    new_image = Image.new('RGB',(num_of_columns*px, num_of_lines*py), (250,250,250))
+    #new_image = Image.new('RGB',(17*1388, 23*1038), (250,250,250))
 
 #     #print(image_file_full_path[1])
 #     #print(image_file_full_path[10])
 #     #print(image_file_full_path[390])
 #     #print(num_of_columns)
 #     #print(num_of_lines)
-#     #print(px)
-#     #print(py)
+    print(px)
+    print(py)
 #     counter = 0
 #     for y in range(num_of_lines):
 #         for x in range(num_of_columns):
