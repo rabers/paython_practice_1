@@ -71,5 +71,5 @@ for i in images_list:
     #print(target_folder[target_folder.find('/data/')+6:target_folder.find(".img")])
     target_full_path = target_folder + "/" + target_folder[target_folder.find('/data/')+6:target_folder.find(".img")] +"_final.jpg"
     print(target_full_path)
-    #print(target_folder)
+    print(target_folder)
     new_image.save(target_full_path,"JPEG")
