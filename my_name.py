@@ -5,3 +5,5 @@ print(sec_str)
 third_str = 'third string to be printed'
 text1 = 'first commit at iss53 branch'
 print(text1)
+text2 = 'second commit at iss53 branch'
+print(text2)
