@@ -13,3 +13,5 @@ text_new = 'test text'
 print(text_new)
 for s in 10:
     print(s+1)
+for t in 20:
+    print(s/2)
