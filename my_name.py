@@ -13,3 +13,6 @@ text_new = 'test text'
 print(text_new)
 for i in 5:
     print(i)
+for j in 3:
+    print(j*4)
+    
