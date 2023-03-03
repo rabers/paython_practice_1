@@ -11,8 +11,15 @@ text2 = 'second commit at iss53 branch'
 print(text2)
 text_new = 'test text'
 print(text_new)
+<<<<<<< HEAD
 for i in 5:
     print(i)
 for j in 3:
     print(j*4)
     
+=======
+for s in 10:
+    print(s+1)
+for t in 20:
+    print(s/2)
+>>>>>>> 88f88bd68898d501f8f46b3a87cb5560d98d4530
